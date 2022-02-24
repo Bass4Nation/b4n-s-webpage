@@ -1,6 +1,6 @@
 .nav_section{
     display: flex;
-    flex-direction: row-reverse
+    flex-direction: row;
 
 }
 .nav_section Link{
