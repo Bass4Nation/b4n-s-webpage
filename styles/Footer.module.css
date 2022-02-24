@@ -1,0 +1,6 @@
+.footer_element{
+    max-width: 10em;
+  }
+  .footer_element:hover{
+    background-color: rgba(8, 8, 8, 0.356);
+  }
