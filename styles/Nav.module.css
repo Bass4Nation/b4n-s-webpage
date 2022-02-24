@@ -1,6 +1,9 @@
 .nav_section{
-    color: red;
+    display: flex;
+    flex-direction: row-reverse
+
 }
-.nav_element{
-    text-decoration: dashed;
+.nav_section Link{
+    background-color: white;
+    margin: 10em;
 }

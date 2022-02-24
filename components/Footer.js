@@ -5,7 +5,7 @@ import styles from "../styles/Footer.module.css";
 const Footer = () => {
   return (
     <>
-      <section>
+      <section className={styles.flex_footer}>
         <section className={styles.footer_element}>
           <p>Git this page</p>
           <Link href="https://github.com/Bass4Nation/b4n-s-webpage" passHref>

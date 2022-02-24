@@ -1,5 +1,11 @@
+.flex_footer{
+  display: flex;
+}
+
 .footer_element{
     max-width: 10em;
+    margin: 10px;
+    padding: 20px;
   }
   .footer_element:hover{
     background-color: rgba(255, 255, 255, 0.356);
