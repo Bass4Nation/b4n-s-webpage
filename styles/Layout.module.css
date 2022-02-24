@@ -1,0 +1,8 @@
+
+
+.footer_element{
+    background-color: rgb(8, 8, 8);
+  }
+  .footer_element:hover{
+    background-color: rgba(8, 8, 8, 0.356);
+  }
