@@ -1,30 +1,40 @@
 import Link from "next/link";
-import styles from  "../styles/Nav.module.css";
+import styles from "../styles/Nav.module.css";
 
 const Nav = () => {
   return (
     <>
-      <section>
-        <h3>Test</h3>
+      <section className={styles.nav_background}>
+        <a className={styles.main_title}>B4N's Portofolie Page</a>
         <section className={styles.nav_section}>
-          <Link href="/" passHref>
-            Home
-          </Link>
-          <Link href="/projects" passHref>
-            Projects
-          </Link>
+          <section className={styles.nav_elements}>
+            <Link href="/" passHref>
+              Home
+            </Link>
+          </section>
+          <section className={styles.nav_elements}>
+            <Link href="/projects" passHref>
+              Projects
+            </Link>
+          </section>
 
-          <Link href="/aboutme" passHref>
-            About me
-          </Link>
+          <section className={styles.nav_elements}>
+            <Link href="/aboutme" passHref>
+              About me
+            </Link>
+          </section>
 
-          <Link href="/contactme" passHref>
-            Contact me
-          </Link>
+          <section className={styles.nav_elements}>
+            <Link href="/contactme" passHref>
+              Contact me
+            </Link>
+          </section>
 
-          <Link href="/firebase" passHref>
-            Firebase
-          </Link>
+          <section className={styles.nav_elements}>
+            <Link href="/firebase" passHref>
+              Firebase
+            </Link>
+          </section>
         </section>
       </section>
     </>
