@@ -2,10 +2,13 @@ export default function Home() {
   return (
     <>
       <section>
-        <a>
-          Hi. This is Kristoffer S Søderkvist AKA Bass4Nation&apos;s Portofolie
-          page. I am a student at HIOF in halden.
-        </a>
+      <p>
+        Hi. This is Bass4Nation AKA Kristoffer S Søderkvist&apos;s portfolio
+        page. On top of this page is is a couple of choice for what you want to
+        read about. And in the bottom of this page is two Github links. First
+        one is for this project, and the second one is for all my public github
+        projects.
+      </p>
       </section>
     </>
   );
