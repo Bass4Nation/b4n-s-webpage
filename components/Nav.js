@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <>
       <section className={styles.nav_background}>
-        <a className={styles.main_title}>B4N&apos;s Portofolie Page</a>
+        <a className={styles.main_title}>B4N&apos;s Portfolio Page</a>
         <section className={styles.nav_section}>
           <section className={styles.nav_elements}>
             <Link href="/" passHref>
