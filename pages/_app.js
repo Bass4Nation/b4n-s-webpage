@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
 
-  const [ constState, setConstState] = useState(true)
+  const [ constState, setConstState] = useState(false)
 
   const [ langState, setLangState] = useState("en")
 
