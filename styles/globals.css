@@ -2,6 +2,7 @@ html,
 body {
   display: flexbox;
   flex-direction: row;
+  background-color: rgb(44, 44, 44);
 
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -14,8 +15,13 @@ a {
 
 * {
   box-sizing: border-box;
-  background-color: #131313;
   color:white;
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-top: 0em;
+}
+main {
+  padding: 1em;
 }
 
 

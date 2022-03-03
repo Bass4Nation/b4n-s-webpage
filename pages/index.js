@@ -2,6 +2,7 @@ export default function Home() {
   return (
     <>
       <section>
+        <p>This page is under construction :)</p>
       <p>
         Hi. This is Bass4Nation AKA Kristoffer S Søderkvist&apos;s portfolio
         page. On top of this page is is a couple of choice for what you want to

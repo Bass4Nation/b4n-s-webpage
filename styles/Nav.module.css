@@ -1,9 +1,7 @@
 .nav_background{
-    color: rgba(207, 0, 0, 0.925);
+    background-color: rgb(65, 65, 65);
 }
-.nav_background:hover{
-    background-color: rgba(207, 0, 0, 0.925);
-}
+
 
 .main_title{
     display: flex;
@@ -16,7 +14,6 @@
 .nav_section{
     display: flex;
     flex-wrap: wrap; 
-    padding: 2em;
     justify-content: center;
 
 }
