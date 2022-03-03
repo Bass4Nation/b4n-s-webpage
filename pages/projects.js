@@ -14,8 +14,8 @@ const Projects = () =>{
         "name": "Tello SDK Drone Controller ",
         "codeLang": "C#",
         "description": "Got a small programmable drone at home. It uses a UDP client to send information on what it should do." +
-        " ",
-        "link": "Not uploaded to Github yet"
+        " etl",
+         "link": "https://github.com/Bass4Nation"
         },]
 
     return (
