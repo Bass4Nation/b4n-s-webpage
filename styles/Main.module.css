@@ -2,3 +2,7 @@
 .projectLinks:hover{
 color:rgb(235, 235, 235);
 }
+
+.projectCard{
+    padding: 1em;
+}

@@ -8,7 +8,7 @@ const ProjectContent = ( {title, codeLang, description, projectLink} ) => {
 
     return (
         <>
-        <section>
+        <section className={styles.projectCard}>
             <p>Title: {title}</p>
             <p>Language used: {codeLang}</p>
             <p>Description: {description}</p>

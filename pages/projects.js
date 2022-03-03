@@ -11,10 +11,10 @@ const Projects = () =>{
         "link": "https://github.com/Bass4Nation/b4n-s-webpage"
     },
      {
-        "name": "Tello SDK Drone Controller. ",
-        "codeLang": "Next.js, HTML, CSS5, JavaScript",
+        "name": "Tello SDK Drone Controller ",
+        "codeLang": "C#",
         "description": "Got a small programmable drone at home. It uses a UDP client to send information on what it should do." +
-        " This project",
+        " ",
         "link": "Not uploaded to Github yet"
         },]
 
