@@ -12,7 +12,7 @@ const ProjectContent = ( {title, codeLang, description, projectLink} ) => {
             <p>Title: {title}</p>
             <p>Language used: {codeLang}</p>
             <p>Description: {description}</p>
-            <p  >Link to this project: <Link href={projectLink} passHref><a className={styles.projectLinks}>{projectLink}</a></Link></p>
+            <p>Link to this project: <Link href={projectLink} passHref><a className={styles.projectLinks}>{projectLink}</a></Link></p>
         </section>
         
         </>

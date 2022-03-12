@@ -6,3 +6,8 @@ color:rgb(235, 235, 235);
 .projectCard{
     padding: 1em;
 }
+
+/* If screen has a max width of 600px */
+@media only screen and (max-width: 600px) {
+
+}
