@@ -13,9 +13,12 @@ const Layout = ({ children }) => {
         <meta name="description" content="Kristoffer S Søderkvist's portfolio page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-      <main >{children}</main>
-      <Footer />
+      <section className={styles.flexlayout}>
+        <Nav />
+        <main >{children}</main>
+        <Footer />
+      </section>
+
     </>
   );
 };
