@@ -3,6 +3,8 @@
   background-color: rgb(65, 65, 65);
   position: relative;
   text-align: center;
+    /* Shadow around the elements */
+    box-shadow: 5px -5px 10px  rgba(22, 22, 22, 0.76);
 }
 
 .footer_element {
