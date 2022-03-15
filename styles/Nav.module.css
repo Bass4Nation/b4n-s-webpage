@@ -23,8 +23,10 @@
 }
 .nav_elements{
     flex: 1;
-    margin: 1%;
-    border-radius:  20px;
+    padding: 0.1vw;
+    padding-top: 1vw;
+    margin: 1vw;
+    border-radius:  2vw;
     border-color: rgba(0, 0, 0, 0.11);
     text-align: center;
     width: 20%;
