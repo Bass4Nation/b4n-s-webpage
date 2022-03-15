@@ -3,12 +3,13 @@ const AboutMe = () => {
     <>
       <h3>About me page</h3>
       <p>
-        Hi. This is Bass4Nation AKA Kristoffer S Søderkvist&apos;s portfolio
-        page. On top of this page is is a couple of choice for what you want to
-        read about. And in the bottom of this page is two Github links. First
-        one is for this project, and the second one is for all my public github
-        projects.
+        Hi. Im Kristoffer Snopestad Søderkvist, right now as Mars 2022 i'm still
+        a bachelor student at HIOF (Halden University). I like to code most
+        language i've tried yet, but some better than other like JavaScript with
+        framework such as Node.js, React.js, NEXT.js. Also like C# and Java.
       </p>
+      <p>But when I get some freetime I like to play videogames on my computer, and watch and try to learn some japanese language. Plus sometime I like to start on my own projects 
+      like this webpage, or try to get my drone to work with some UDP commands</p>
     </>
   );
 };

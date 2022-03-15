@@ -1,4 +1,3 @@
-
 import ProjectContent from "../components/ProjectContent";
 
 const Projects = () => {
@@ -20,8 +19,15 @@ const Projects = () => {
         " etl",
       link: "https://github.com/Bass4Nation",
     },
+    {
+      key: "3",
+      name: "F1Tenth Autonomous Driving Car (Ongoing)",
+      codeLang: "Python, Shell, C++",
+      description:
+        "Self driven RC car, 2D lidar mapping, also possible with manuell control",
+      link: "https://github.com/fredlau95/AutonomousRacecar",
+    },
   ];
-
 
   return (
     <>
