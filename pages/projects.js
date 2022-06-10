@@ -9,6 +9,7 @@ const Projects = () => {
       description:
         "This webpage. Wanted to make this webpage because it could show some of my coding skills.",
       link: "https://github.com/Bass4Nation/b4n-s-webpage",
+      picture: "/public/drone_controller.png",
     },
     {
       key: "2",
@@ -18,6 +19,7 @@ const Projects = () => {
         "Got a small programmable drone at home. It uses a UDP client to send information on what it should do." +
         " etl",
       link: "https://github.com/Bass4Nation/Tello-Drone",
+      picture: "/public/drone_controller.png",
     },
     {
       key: "3",
@@ -25,7 +27,8 @@ const Projects = () => {
       codeLang: "Python, Shell, C++",
       description:
         "Self driven RC car, 2D lidar mapping, also possible with manuell control",
-      link: "https://github.com/fredlau95/AutonomousRacecar",
+      link: "doesn't have a github link",
+      picture: "/public/drone_controller.png",
     },
       {
       key: "4",
@@ -34,6 +37,7 @@ const Projects = () => {
       description:
         "This is a direct link to my account at Github.com. It should be possible to see other projects and some school assignments I have worked on.",
       link: "https://github.com/Bass4Nation",
+      picture: "/public/drone_controller.png",
     },
   ];
 
