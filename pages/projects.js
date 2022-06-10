@@ -1,6 +1,17 @@
 import ProjectContent from "../components/ProjectContent";
+import dynamic from 'next/dynamic'
 
-const Projects = () => {
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://api.github.com/users/Bass4Nation/repos`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
+const Projects = ({ data }) => {
   const projectData = [
     {
       key: "1",
@@ -23,7 +34,7 @@ const Projects = () => {
     },
     {
       key: "3",
-      name: "F1Tenth Autonomous Driving Car (Ongoing)",
+      name: "F1Tenth Autonomous Driving Car (Complete Bachlor Assignment)",
       codeLang: "Python, Shell, C++",
       description:
         "Self driven RC car, 2D lidar mapping, also possible with manuell control",
@@ -40,8 +51,7 @@ const Projects = () => {
       picture: "/public/drone_controller.png",
     },
   ];
-
-  
+  console.log(data)
 
   return (
     <>
@@ -56,6 +66,18 @@ const Projects = () => {
           projectLink={data.link}
         />
       ))}
+      <section>
+        <h3>This is the rest of my github</h3>
+        {data.map((git)=> (
+          <ProjectContent 
+          key={git.node_id}
+          title={git.name}
+          codeLang={git.language}
+          description={git.description}
+          projectLink={git.svn_url}
+          />
+        ))}
+      </section>
     </>
   );
 };

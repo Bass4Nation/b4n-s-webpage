@@ -1,11 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/Main.module.css";
 
-
-
 const ProjectContent = ( {title, codeLang, description, projectLink} ) => {
-
-
     return (
         <>
         <section className={styles.projectCard}>
