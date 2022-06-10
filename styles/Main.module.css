@@ -5,6 +5,18 @@ color:rgb(235, 235, 235);
 
 .projectCard{
     padding: 1em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    max-width: 20vw;
+}
+.projectCard h3{
+    font-size: large;
+}
+.projectCard p{
+    font-size:medium;
 }
 
 /* If screen has a max width of 600px */
