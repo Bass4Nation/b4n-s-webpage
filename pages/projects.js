@@ -1,12 +1,10 @@
 import ProjectContent from "../components/ProjectContent";
-import dynamic from 'next/dynamic'
-
+import style from "../styles/Main.module.css"
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(`https://api.github.com/users/Bass4Nation/repos`)
   const data = await res.json()
-
   // Pass data to the page via props
   return { props: { data } }
 }
@@ -41,7 +39,7 @@ const Projects = ({ data }) => {
       link: "doesn't have a github link",
       picture: "/public/drone_controller.png",
     },
-      {
+    {
       key: "4",
       name: "All git repositories",
       codeLang: "Java, C#, Python, Shell, C++",
@@ -55,28 +53,34 @@ const Projects = ({ data }) => {
 
   return (
     <>
-      <h3> Projects page</h3>
-
-      {projectData.map((data) => (
-        <ProjectContent
-          key={data.key}
-          title={data.name}
-          codeLang={data.codeLang}
-          description={data.description}
-          projectLink={data.link}
-        />
-      ))}
       <section>
+        <h3> Projects page</h3>
+        <section className={style.projectCards}>
+          {projectData.map((data) => (
+            <ProjectContent
+              key={data.key}
+              title={data.name}
+              codeLang={data.codeLang}
+              description={data.description}
+              projectLink={data.link}
+            />
+          ))}
+
+        </section>
         <h3>This is the rest of my github</h3>
-        {data.map((git)=> (
-          <ProjectContent 
-          key={git.node_id}
-          title={git.name}
-          codeLang={git.language}
-          description={git.description}
-          projectLink={git.svn_url}
-          />
-        ))}
+
+        <section className={style.projectCards}>
+          {data.map((git) => (
+            <ProjectContent
+              key={git.node_id}
+              title={git.name}
+              codeLang={git.language}
+              description={git.description}
+              projectLink={git.svn_url}
+            />
+          ))}
+        </section>
+
       </section>
     </>
   );

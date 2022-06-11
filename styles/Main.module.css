@@ -1,25 +1,36 @@
-
-.projectLinks:hover{
-color:rgb(235, 235, 235);
+.projectLinks:hover {
+    color: rgb(235, 235, 235);
 }
 
-.projectCard{
-    padding: 1em;
+.projectCards {
     display: flex;
-    flex-flow: column;
-    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2vw;
+}
+
+.projectCard {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1em;
     border: 2px solid black;
     border-radius: 20px;
-    max-width: 20vw;
+    margin: 1vw;
+    font-size: 2vw;
+    width:20%;
+    height: 20%;
+    word-wrap: break-word
 }
-.projectCard h3{
+
+.projectCard h3 {
     font-size: large;
 }
-.projectCard p{
-    font-size:medium;
+
+.projectCard p {
+    font-size: medium;
+}
+.projectCard a {
+    text-decoration:underline;
 }
 
 /* If screen has a max width of 600px */
-@media only screen and (max-width: 600px) {
-
-}
+@media only screen and (max-width: 600px) {}
