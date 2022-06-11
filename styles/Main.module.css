@@ -5,20 +5,46 @@
 .projectCards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 2vw;
 }
+
 
 .projectCard {
     display: flex;
     flex-flow: column wrap;
-    padding: 1em;
+    padding: 7%;
+    font-size: 2vw;
+    width: 20%;
+    height: 20%;
+    word-wrap: break-word;
+}
+
+.flip {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.projectCard:hover .flip {
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+}
+
+.front,
+.back {
+    position:inherit;
+    background: transparent;
+    color: #03446A;
+    backface-visibility: hidden;
     border: 2px solid black;
     border-radius: 20px;
-    margin: 1vw;
-    font-size: 2vw;
-    width:20%;
-    height: 20%;
-    word-wrap: break-word
+}
+
+.back {
+    transform: rotateY(180deg);
 }
 
 .projectCard h3 {
@@ -28,8 +54,14 @@
 .projectCard p {
     font-size: medium;
 }
+
 .projectCard a {
-    text-decoration:underline;
+    text-decoration: underline;
+}
+
+.projectCard img {
+    width: 100%;
+    border-radius: 20px;
 }
 
 /* If screen has a max width of 600px */
