@@ -1,5 +1,14 @@
+$wh: 20%;
+$fontsize: 2vw;
+$cardPadding: 10vw;
+$roundedCorners: 20px;
+$thinBlackLine: 2px solid black;
+// Colors
+$white: rgb(235, 235, 235);
+$blueish: #03446A;
+
 .projectLinks:hover {
-    color: rgb(235, 235, 235);
+    color: $white;
 }
 
 .projectCards {
@@ -13,17 +22,17 @@
 .projectCard {
     display: flex;
     flex-flow: column wrap;
-    padding: 7%;
-    font-size: 2vw;
-    width: 20%;
-    height: 20%;
+    padding-top: $cardPadding;
+    font-size: $fontsize;
+    width: $wh;
+    height: $wh;
     word-wrap: break-word;
 }
 
 .flip {
     position: absolute;
-    width: 20%;
-    height: 20%;
+    width: $wh;
+    height: $wh;
     transition: transform 1s;
     transform-style: preserve-3d;
 }
@@ -37,10 +46,10 @@
 .back {
     position:inherit;
     background: transparent;
-    color: #03446A;
+    color: $blueish;
     backface-visibility: hidden;
-    border: 2px solid black;
-    border-radius: 20px;
+    border: $thinBlackLine;
+    border-radius: $roundedCorners;
 }
 
 .back {
@@ -61,7 +70,7 @@
 
 .projectCard img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: $roundedCorners;
 }
 
 /* If screen has a max width of 600px */
