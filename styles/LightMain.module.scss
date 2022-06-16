@@ -4,22 +4,23 @@ $cardPadding: 10vw;
 $roundedCorners: 20px;
 $thinBlackLine: 2px solid black;
 // Color
-$background: rgb(44, 44, 44) ;
+$background: rgb(255, 255, 255) ;
 $white: rgb(235, 235, 235);
 $blueish: #03446A;
 $lightGray:rgb(65, 65, 65) ;
 // Font
 $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$fontColor: rgb(0, 0, 0);
 
 
 // MAIN GLOBAL
 .bodyStyle{
     background-color: $background;
     font-family: $mainFont;
-    color: $white;
-
-
+    color: $fontColor;
 }
+
+// Toggle light / dark mode
 
 
 
@@ -44,7 +45,7 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
     display: flex;
     justify-content: center;
     font-size: 5.5vw;
-    color: rgb(255, 255, 255);
+    color: $fontColor;
 }
 
 .nav_section{
@@ -85,7 +86,7 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
     .main_title{
         display: flex;
         font-size: 5.5vw;
-        color: $white;
+        color: $fontColor;
     }
     .nav_section{
         display: flex;
@@ -126,7 +127,7 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
 //  projects
 
 .projectLinks:hover {
-    color: $white;
+    color: $fontColor;
 }
 
 .projectCards {

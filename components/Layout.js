@@ -1,9 +1,25 @@
-import styles from "../styles/Main.module.scss";
+import stylesDark from "../styles/Main.module.scss";
+import styleLight from "../styles/LightMain.module.scss"
+import { useState } from "react";
 import Nav from "./Nav";
 import Head from "next/head";
 import Footer from "./Footer";
+import { themes } from "../constants/global"
 
 const Layout = ({ children }) => {
+  let styles = stylesDark;
+
+  const [selected, setSelected] = useState(themes[0].value);
+
+  const handleChange = event => {
+    console.log(event.target.value);
+    setSelected(event.target.value);
+  };
+
+  if(selected == "Light"){
+    styles = styleLight;
+  }
+  
   return (
     <>
       <Head>
@@ -16,6 +32,13 @@ const Layout = ({ children }) => {
 
       <section className={styles.flexlayout}>
         <Nav />
+        <select value={selected} onChange={handleChange}>
+        {themes.map(option => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
         <main>{children}</main>
         <Footer />
       </section>
