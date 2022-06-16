@@ -3,9 +3,127 @@ $fontsize: 2vw;
 $cardPadding: 10vw;
 $roundedCorners: 20px;
 $thinBlackLine: 2px solid black;
-// Colors
+// Color
+$background: rgb(44, 44, 44) ;
 $white: rgb(235, 235, 235);
 $blueish: #03446A;
+$lightGray:rgb(65, 65, 65) ;
+// Font
+$mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+
+// MAIN GLOBAL
+.bodyStyle{
+    background-color: $background;
+    font-family: $mainFont;
+    color: $white;
+
+
+}
+
+
+
+// Layout
+.flexlayout{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+// Navigation
+
+.nav_background{
+    background-color: $lightGray ;
+    padding-bottom: 1em;
+    /* Shadow below nav field */
+    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76); 
+}
+
+
+.main_title{
+    display: flex;
+    justify-content: center;
+    font-size: 5.5vw;
+    color: rgb(255, 255, 255);
+}
+
+.nav_section{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+
+}
+.nav_elements{
+    flex: 1;
+    padding: 0.1vw;   
+    margin: 1vw;
+    border-radius:  2vw;
+    border-color: rgba(0, 0, 0, 0.11);
+    text-align: center;
+    width: 20%;
+    /* Shadow around the elements */
+    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76); 
+}
+
+.nav_active{
+    flex: 1;
+    padding: .1vw;
+    margin: 1vw;
+    border-radius:  2vw;
+    border-color: rgba(0, 0, 0, 0.11);
+    text-align: center;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.233);
+    /* Shadow around the elements */
+    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76);   
+}
+.nav_elements:hover{
+    background-color: rgba(255, 255, 255, 0.233);
+}
+
+@media (max-width: 600px) {
+    .main_title{
+        display: flex;
+        font-size: 5.5vw;
+        color: rgb(255, 255, 255);
+    }
+    .nav_section{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: left;
+    }
+
+    .nav_elements{
+        flex: 1;
+        margin: 1%;
+        border-radius:  2vw;
+        border-color: rgba(0, 0, 0, 0.11);
+        text-align: center;
+        min-width: 35vw;
+        width: 20%;
+        /* Shadow around the elements */
+        box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76); 
+    }
+
+    .nav_active{
+        flex: 1;
+        padding: 0.1vw;
+        padding-top: 1vw;
+        margin: 1vw;
+        border-radius:  2vw;
+        border-color: rgba(0, 0, 0, 0.11);
+        text-align: center;
+        min-width: 35vw;
+        width: 20%;
+        background-color: rgba(255, 255, 255, 0.233);
+        /* Shadow around the elements */
+        box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76);   
+    }
+    
+  }
+
+
+//  projects
 
 .projectLinks:hover {
     color: $white;
@@ -46,7 +164,7 @@ $blueish: #03446A;
 .back {
     position:inherit;
     background: transparent;
-    color: $blueish;
+    color: $white;
     backface-visibility: hidden;
     border: $thinBlackLine;
     border-radius: $roundedCorners;
@@ -72,6 +190,36 @@ $blueish: #03446A;
     width: 100%;
     border-radius: $roundedCorners;
 }
+
+
+// Footer
+
+.flex_footer {
+    display: flex;
+    background-color: $lightGray;
+    position: relative;
+    text-align: center;
+    /* Shadow around the elements */
+    box-shadow: 5px -5px 10px  rgba(22, 22, 22, 0.76);
+  }
+  
+  .footer_element {
+    max-width: 10em;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 25px;
+    /* Shadow around the elements */
+    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76);
+  }
+  .footer_element:hover {
+    background-color: rgba(255, 255, 255, 0.356);
+  }
+  
+  /* https://codepen.io/cbracco/pen/kQmVGM
+    Always bottom footer */
+  
+
+//
 
 /* If screen has a max width of 600px */
 @media only screen and (max-width: 600px) {}
