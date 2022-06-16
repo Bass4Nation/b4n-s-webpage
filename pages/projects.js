@@ -14,7 +14,7 @@ export async function getServerSideProps() {
 
 
 const Projects = ({ data }) => {
-  console.log(data)
+  // console.log(data)
 
   return (
     <>
