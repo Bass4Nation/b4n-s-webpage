@@ -1,7 +1,11 @@
+import Updates from "../components/Updates";
+import style1 from "../styles/Main.module.scss"
+
 export default function Home() {
+  let style = style1;
   return (
     <>
-      <section>
+      <section className={style}>
       <h2>Frontpage</h2>
         <p>This page is under construction :)</p>
         <p>
@@ -11,6 +15,9 @@ export default function Home() {
           First one is for this project, and the second one is for all my public
           github projects.
         </p>
+      </section>
+      <section>
+        <Updates />
       </section>
     </>
   );
