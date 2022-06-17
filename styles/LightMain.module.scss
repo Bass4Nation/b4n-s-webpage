@@ -1,16 +1,44 @@
+// Imported fonts
+// Imported from Google
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
 $wh: 20%;
-$fontsize: 2vw;
 $cardPadding: 10vw;
 $roundedCorners: 20px;
 $thinBlackLine: 2px solid black;
+$cardMarg: 10px;
+$cardPad: 10px;
+$elementShadow:5px 5px 10px rgba(22, 22, 22, 0.76);
+$shadowFooter: 5px -5px 10px  rgba(22, 22, 22, 0.76);
 // Color
-$background: rgb(255, 255, 255) ;
+
 $white: rgb(235, 235, 235);
 $blueish: #03446A;
-$lightGray:rgb(65, 65, 65) ;
+$darkerGray:rgb(44, 44, 44); 
+$lightGray:rgb(65, 65, 65);
+$lightGray2: rgba(255, 255, 255, 0.233);
+$black: rgb(0, 0, 0);
 // Font
+$fontsize: 20px;
+$background: $white;
+
+$fontColor: $black;
 $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-$fontColor: rgb(0, 0, 0);
+$titleFontColor: $fontColor;
+
+$navActiveColor: $lightGray2;
+
+$pageFontSize: 10vw;
+$pageFont: Rajdhani;
+
+$themeSelectFont: Staatliches;
+$themeSelectFontSize: $fontsize;
+$themeSelectMaxWidth: 150px;
+$themeSelectionColor: $white;
+
+$footerColor:$white;
+$footerHoverColor: $white;
 
 
 // MAIN GLOBAL
@@ -20,9 +48,6 @@ $fontColor: rgb(0, 0, 0);
     color: $fontColor;
 }
 
-// Toggle light / dark mode
-
-
 
 // Layout
 .flexlayout{
@@ -31,13 +56,29 @@ $fontColor: rgb(0, 0, 0);
     flex-direction: column;
     justify-content: space-between;
 }
+
+// Selection for themes
+.themeSelection{
+    color:$fontColor;
+    background-color: $themeSelectionColor;
+    border-radius: $roundedCorners;
+    font-family: $themeSelectFont;
+    font-size: $themeSelectFontSize;
+    text-align: center;
+    max-width: $themeSelectMaxWidth;
+    margin: 1em;
+    appearance: none;
+}
+.themeSelection:hover{
+    border-radius: $roundedCorners;
+}
 // Navigation
 
 .nav_background{
     background-color: $lightGray ;
     padding-bottom: 1em;
     /* Shadow below nav field */
-    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76); 
+    box-shadow: $elementShadow; 
 }
 
 
@@ -45,7 +86,7 @@ $fontColor: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     font-size: 5.5vw;
-    color: $fontColor;
+    color: $titleFontColor;
 }
 
 .nav_section{
@@ -58,28 +99,26 @@ $fontColor: rgb(0, 0, 0);
     flex: 1;
     padding: 0.1vw;   
     margin: 1vw;
-    border-radius:  2vw;
-    border-color: rgba(0, 0, 0, 0.11);
+    border-radius: $roundedCorners;
     text-align: center;
     width: 20%;
     /* Shadow around the elements */
-    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76); 
+    box-shadow: $elementShadow; 
+    transition: 0.5s;
+
 }
 
 .nav_active{
     flex: 1;
     padding: .1vw;
     margin: 1vw;
-    border-radius:  2vw;
-    border-color: rgba(0, 0, 0, 0.11);
+    border-radius: $roundedCorners;
     text-align: center;
     width: 20%;
-    background-color: rgba(255, 255, 255, 0.233);
-    /* Shadow around the elements */
-    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76);   
+    background-color: $navActiveColor;
 }
 .nav_elements:hover{
-    background-color: rgba(255, 255, 255, 0.233);
+    background-color: $navActiveColor;
 }
 
 @media (max-width: 600px) {
@@ -103,7 +142,7 @@ $fontColor: rgb(0, 0, 0);
         min-width: 35vw;
         width: 20%;
         /* Shadow around the elements */
-        box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76); 
+        box-shadow: $elementShadow; 
     }
 
     .nav_active{
@@ -116,15 +155,19 @@ $fontColor: rgb(0, 0, 0);
         text-align: center;
         min-width: 35vw;
         width: 20%;
-        background-color: rgba(255, 255, 255, 0.233);
-        /* Shadow around the elements */
-        box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76);   
+        background-color: $navActiveColor ;
     }
     
   }
 
 
 //  projects
+
+.projectTitle{
+    text-align: center;
+    font-size: $pageFontSize;
+    font-family: $pageFont;
+}
 
 .projectLinks:hover {
     color: $fontColor;
@@ -141,38 +184,16 @@ $fontColor: rgb(0, 0, 0);
 .projectCard {
     display: flex;
     flex-flow: column wrap;
-    padding-top: $cardPadding;
     font-size: $fontsize;
-    width: $wh;
-    height: $wh;
     word-wrap: break-word;
 }
 
-.flip {
-    position: absolute;
-    width: $wh;
-    height: $wh;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.projectCard:hover .flip {
-    transform: rotateY(180deg);
-    transition: transform 0.5s;
-}
-
-.front,
-.back {
-    position:inherit;
-    background: transparent;
-    color: $white;
-    backface-visibility: hidden;
+.front {
     border: $thinBlackLine;
+    margin: $cardMarg;
+    padding: $cardPad;
+    box-shadow: $elementShadow;
     border-radius: $roundedCorners;
-}
-
-.back {
-    transform: rotateY(180deg);
 }
 
 .projectCard h3 {
@@ -197,23 +218,23 @@ $fontColor: rgb(0, 0, 0);
 
 .flex_footer {
     display: flex;
-    background-color: $lightGray;
+    background-color: $footerColor;
     position: relative;
     text-align: center;
     /* Shadow around the elements */
-    box-shadow: 5px -5px 10px  rgba(22, 22, 22, 0.76);
+    box-shadow: $shadowFooter;
   }
   
   .footer_element {
     max-width: 10em;
     margin: 10px;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: $roundedCorners;
     /* Shadow around the elements */
-    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76);
+    box-shadow: $elementShadow;
   }
   .footer_element:hover {
-    background-color: rgba(255, 255, 255, 0.356);
+    background-color: $footerHoverColor;
   }
   
   /* https://codepen.io/cbracco/pen/kQmVGM

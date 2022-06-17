@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
 
       <section className={styles.flexlayout}>
         <Nav />
-        <select value={selected} onChange={handleChange}>
+        <select value={selected} className={styles.themeSelection} onChange={handleChange}>
         {themes.map(option => (
           <option key={option} value={option}>
             {option}
