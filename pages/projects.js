@@ -19,7 +19,7 @@ const Projects = ({ data }) => {
   return (
     <>
       <section>
-        <h3> Projects page</h3>
+        <h3 className={style.projectTitle}> Projects page</h3>
         <section className={style.projectCards}>
           {data.map((git) => (
             <ProjectContent

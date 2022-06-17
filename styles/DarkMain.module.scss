@@ -1,18 +1,22 @@
 $wh: 20%;
-$fontsize: 2vw;
 $cardPadding: 10vw;
 $roundedCorners: 20px;
 $thinBlackLine: 2px solid black;
 $cardMarg: 10px;
 $cardPad: 10px;
-$cardShadow:5px 5px 10px rgba(22, 22, 22, 0.76);
+$elementShadow:5px 5px 10px rgba(22, 22, 22, 0.76);
+$shadowFooter: 5px -5px 10px  rgba(22, 22, 22, 0.76);
 // Color
 $background: rgb(44, 44, 44) ;
 $white: rgb(235, 235, 235);
 $blueish: #03446A;
-$lightGray:rgb(65, 65, 65) ;
+$lightGray:rgb(65, 65, 65);
 // Font
+$fontsize: 2vw;
 $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$titleFontColor: $white;
+$pageFontSize: 10vw;
+
 
 
 // MAIN GLOBAL
@@ -37,7 +41,7 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
     background-color: $lightGray ;
     padding-bottom: 1em;
     /* Shadow below nav field */
-    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76); 
+    box-shadow: $elementShadow; 
 }
 
 
@@ -45,7 +49,7 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
     display: flex;
     justify-content: center;
     font-size: 5.5vw;
-    color: rgb(255, 255, 255);
+    color: $titleFontColor;
 }
 
 .nav_section{
@@ -63,7 +67,7 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
     text-align: center;
     width: 20%;
     /* Shadow around the elements */
-    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76); 
+    box-shadow: $elementShadow; 
 }
 
 .nav_active{
@@ -76,7 +80,7 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
     width: 20%;
     background-color: rgba(255, 255, 255, 0.233);
     /* Shadow around the elements */
-    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76);   
+    box-shadow: $elementShadow;   
 }
 .nav_elements:hover{
     background-color: rgba(255, 255, 255, 0.233);
@@ -103,7 +107,7 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
         min-width: 35vw;
         width: 20%;
         /* Shadow around the elements */
-        box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76); 
+        box-shadow: $elementShadow; 
     }
 
     .nav_active{
@@ -118,13 +122,20 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
         width: 20%;
         background-color: rgba(255, 255, 255, 0.233);
         /* Shadow around the elements */
-        box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76);   
+        box-shadow: $elementShadow;   
     }
     
   }
 
 
 //  projects
+
+.projectTitle{
+    text-align: center;
+    font-size: $pageFontSize;
+    text-decoration:underline;
+
+}
 
 .projectLinks:hover {
     color: $white;
@@ -149,7 +160,7 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
     border: $thinBlackLine;
     margin: $cardMarg;
     padding: $cardPad;
-    box-shadow: $cardShadow;
+    box-shadow: $elementShadow;
     border-radius: $roundedCorners;
 }
 
@@ -179,16 +190,16 @@ $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, 
     position: relative;
     text-align: center;
     /* Shadow around the elements */
-    box-shadow: 5px -5px 10px  rgba(22, 22, 22, 0.76);
+    box-shadow: $shadowFooter;
   }
   
   .footer_element {
     max-width: 10em;
     margin: 10px;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: $roundedCorners;
     /* Shadow around the elements */
-    box-shadow: 5px 5px 10px rgba(22, 22, 22, 0.76);
+    box-shadow: $elementShadow;
   }
   .footer_element:hover {
     background-color: rgba(255, 255, 255, 0.356);
