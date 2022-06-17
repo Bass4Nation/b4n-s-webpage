@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
 $wh: 20%;
 $cardPadding: 10vw;
 $roundedCorners: 20px;
@@ -16,6 +18,7 @@ $fontsize: 2vw;
 $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 $titleFontColor: $white;
 $pageFontSize: 10vw;
+$pageFont: Rajdhani;
 
 
 
@@ -133,7 +136,7 @@ $pageFontSize: 10vw;
 .projectTitle{
     text-align: center;
     font-size: $pageFontSize;
-    text-decoration:underline;
+    font-family: $pageFont;
 
 }
 
