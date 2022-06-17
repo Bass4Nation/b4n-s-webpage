@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from 'next/image'
-import styles from "../styles/Main.module.scss";
+import styles from "../styles/DarkMain.module.scss";
 
 
 const ProjectContent = ({ title, codeLang, description, projectLink, fullName }) => {
@@ -15,13 +15,13 @@ const ProjectContent = ({ title, codeLang, description, projectLink, fullName })
                         <h3>Title: {title}</h3>
                         <p>Language used: {codeLang} and more</p>
                         <p>Description: {description}</p>
-                        <p>Github link to this project click on picture on hover</p>
+                        <Link href={projectLink} passHref><p>Go to Github repository</p></Link>
                     </section>
-                    <section className={styles.back}>
+                    {/* <section className={styles.back}>
                     <Link href={projectLink} passHref>
                         <img src={previewImg} />
                         </Link>
-                    </section>
+                    </section> */}
                 </section>
             </section>
         </>

@@ -1,4 +1,4 @@
-import stylesDark from "../styles/Main.module.scss";
+import stylesDark from "../styles/DarkMain.module.scss";
 import styleLight from "../styles/LightMain.module.scss"
 import { useState } from "react";
 import Nav from "./Nav";

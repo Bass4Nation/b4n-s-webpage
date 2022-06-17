@@ -1,5 +1,5 @@
 import ProjectContent from "../components/ProjectContent";
-import style from "../styles/Main.module.scss"
+import style from "../styles/DarkMain.module.scss"
 
 
 // This gets called on every request

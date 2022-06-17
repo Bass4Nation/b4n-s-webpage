@@ -1,5 +1,5 @@
 import Updates from "../components/Updates";
-import style1 from "../styles/Main.module.scss"
+import style1 from "../styles/DarkMain.module.scss"
 
 export default function Home() {
   let style = style1;

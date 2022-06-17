@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/Main.module.scss";
+import styles from "../styles/DarkMain.module.scss";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
