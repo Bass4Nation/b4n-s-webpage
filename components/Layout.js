@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
           </button>
         ))}
 
-        <main>{children}</main>
+        <main className={styles.mainContent}>{children}</main>
         <Footer theme={theme}/>
       </section>
       </body>

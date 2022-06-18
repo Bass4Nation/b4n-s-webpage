@@ -22,7 +22,7 @@ $black: rgb(0, 0, 0);
 $gradientYG: linear-gradient(to bottom right, yellow , green );
 // Font
 $fontsize: 20px;
-$background: $gradientYG;
+$backgroundColor: $gradientYG;
 
 $fontColor: $black;
 $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -41,18 +41,23 @@ $themeSelectionColor: $white;
 $footerColor:$gradientYG;
 $footerHoverColor: $lightGray2;
 
-$img: url("./easter/banana/banana.png");
+$banana1: url("./easter/banana/banana1.png");
+$banana2: url("./easter/banana/banana2.png");
 
 
 // MAIN GLOBAL
 .bodyStyle{
-    background-image:$gradientYG, $img;
+    background-image:$gradientYG, $banana1;
     // background-color: $background;
     font-family: $mainFont;
     color: $fontColor;
     background-position: center;
     background-repeat: repeat;
     background-size:auto;
+}
+.mainContent{
+    background-image: $banana2;
+    background-size: 20vw;
 }
 
 
@@ -67,14 +72,14 @@ $img: url("./easter/banana/banana.png");
 // Selection for themes
 .themeSelection{
     color:$fontColor;
-    background-color: $themeSelectionColor;
+    // background-color: $themeSelectionColor;
+    background-image: $banana2;
     border-radius: $roundedCorners;
     font-family: $themeSelectFont;
     font-size: $themeSelectFontSize;
     text-align: center;
     max-width: $themeSelectMaxWidth;
-    margin: 1em;
-    appearance: none;
+    margin: 0.5em;
 }
 .themeSelection:hover{
     border-radius: $roundedCorners;
@@ -82,7 +87,7 @@ $img: url("./easter/banana/banana.png");
 // Navigation
 
 .nav_background{
-    background-image: $img;
+    background-image: $banana1;
     padding-bottom: 1em;
     /* Shadow below nav field */
     box-shadow: $elementShadow; 
@@ -229,6 +234,7 @@ $img: url("./easter/banana/banana.png");
 .flex_footer {
     display: flex;
     background-color: $footerColor;
+    background-image: $banana1;
     position: relative;
     text-align: center;
     /* Shadow around the elements */
