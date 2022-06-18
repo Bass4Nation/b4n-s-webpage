@@ -1,31 +1,24 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 
 import stylesDark from "../styles/DarkMain.module.scss";
 import styleLight from "../styles/LightMain.module.scss"
 import styleBanana from "../styles/BananaMain.module.scss"
-import { themes } from "../constants/global"
 
-const Footer = () => {
-  let styles = stylesDark;
+const Footer = ({theme}) => {
 
-  const [selected, setSelected] = useState(themes[0].value);
+  let styles;
 
-  const handleChange = event => {
-    console.log(event.target.value);
-    setSelected(event.target.value);
-  };
-
-  if(selected == "Light"){
+  if(theme == "Light"){
     styles = styleLight;
   }  
-  if(selected == "Dark"){
+  if(theme == "Dark"){
     styles = stylesDark;
   }  
-  if(selected == "Banana"){
+  if(theme == "Banana"){
     styles = styleBanana;
   }
+
 
   return (
     <>

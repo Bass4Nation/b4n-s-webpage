@@ -29,7 +29,7 @@ export const useGit = () => {
         const getAllPatch = async () => {
             try {
                 const response = await axios.get('https://api.github.com/repos/Bass4Nation/b4n-s-webpage/events')
-                console.log(response.data);
+                // console.log(response.data);
                 if(response?.status == 200){
                     setAllPatch(response.data)
                 }

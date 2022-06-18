@@ -1,25 +1,26 @@
 import Link from "next/link";
-
 import stylesDark from "../styles/DarkMain.module.scss";
 import styleLight from "../styles/LightMain.module.scss"
 import styleBanana from "../styles/BananaMain.module.scss"
-import { themes, themeDefault } from "../constants/global"
 
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-const Nav = () => {
+const Nav = ({theme}) => {
   const router = useRouter();
   const [screenState, setScreenState] = useState(true);
+  
+  let styles;
 
-  let styles = stylesDark;
-
-  const [selected, setSelected] = useState(themes[0].value);
-
-  const handleChange = event => {
-    console.log(event.target.value);
-    setSelected(event.target.value);
-  };
+  if(theme == "Light"){
+    styles = styleLight;
+  }  
+  if(theme == "Dark"){
+    styles = stylesDark;
+  }  
+  if(theme == "Banana"){
+    styles = styleBanana;
+  }
 
   const fullscreen = (
     <>
@@ -69,7 +70,7 @@ const Nav = () => {
         </section>
       </Link>
 
-      <Link href="/firebase" passHref>
+      {/* <Link href="/firebase" passHref>
         <section
           className={
             router.pathname == "/firebase"
@@ -79,7 +80,7 @@ const Nav = () => {
         >
           <p>Firebase</p>
         </section>
-      </Link>
+      </Link> */}
     </>
   );
   const mobileMenu = (

@@ -14,6 +14,7 @@ $shadowFooter: 5px -5px 10px  rgba(22, 22, 22, 0.76);
 // Color
 
 $white: rgb(235, 235, 235);
+$whitegray: rgb(206, 206, 206);
 $blueish: #03446A;
 $darkerGray:rgb(44, 44, 44); 
 $lightGray:rgb(65, 65, 65);
@@ -26,8 +27,8 @@ $background: $white;
 $fontColor: $black;
 $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 $titleFontColor: $fontColor;
-
-$navActiveColor: $lightGray2;
+$nav_background : $white;
+$navActiveColor: $whitegray;
 
 $pageFontSize: 10vw;
 $pageFont: Rajdhani;
@@ -75,7 +76,7 @@ $footerHoverColor: $white;
 // Navigation
 
 .nav_background{
-    background-color: $lightGray ;
+    background-color: $nav_background ;
     padding-bottom: 1em;
     /* Shadow below nav field */
     box-shadow: $elementShadow; 

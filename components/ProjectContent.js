@@ -1,11 +1,10 @@
 import Link from "next/link";
-import Image from 'next/image'
 import styles from "../styles/DarkMain.module.scss";
 
 
 const ProjectContent = ({ title, codeLang, description, projectLink, fullName }) => {
 
-    let previewImg = "https://raw.githubusercontent.com/" + fullName + "/main/pictures/preview.png"
+    // let previewImg = "https://raw.githubusercontent.com/" + fullName + "/main/pictures/preview.png"
 
     return (
         <>
@@ -17,11 +16,6 @@ const ProjectContent = ({ title, codeLang, description, projectLink, fullName })
                         <p>Description: {description}</p>
                         <Link href={projectLink} passHref><p>Go to Github repository</p></Link>
                     </section>
-                    {/* <section className={styles.back}>
-                    <Link href={projectLink} passHref>
-                        <img src={previewImg} />
-                        </Link>
-                    </section> */}
                 </section>
             </section>
         </>

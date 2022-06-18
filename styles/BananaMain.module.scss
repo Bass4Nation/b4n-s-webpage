@@ -19,11 +19,12 @@ $darkerGray:rgb(44, 44, 44);
 $lightGray:rgb(65, 65, 65);
 $lightGray2: rgba(255, 255, 255, 0.233);
 $black: rgb(0, 0, 0);
+$gradientYG: linear-gradient(to bottom right, yellow , green );
 // Font
 $fontsize: 20px;
-$background: $darkerGray;
+$background: $gradientYG;
 
-$fontColor: $white;
+$fontColor: $black;
 $mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 $titleFontColor: $fontColor;
 
@@ -35,9 +36,9 @@ $pageFont: Rajdhani;
 $themeSelectFont: Staatliches;
 $themeSelectFontSize: $fontsize;
 $themeSelectMaxWidth: 150px;
-$themeSelectionColor: $black;
+$themeSelectionColor: $white;
 
-$footerColor:$lightGray;
+$footerColor:$gradientYG;
 $footerHoverColor: $lightGray2;
 
 $img: url("./easter/banana/banana.png");
@@ -45,7 +46,7 @@ $img: url("./easter/banana/banana.png");
 
 // MAIN GLOBAL
 .bodyStyle{
-    background-image:$img ;
+    background-image:$gradientYG, $img;
     // background-color: $background;
     font-family: $mainFont;
     color: $fontColor;

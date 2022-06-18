@@ -6,27 +6,28 @@ import Nav from "./Nav";
 import Head from "next/head";
 import Footer from "./Footer";
 import { themes, themeDefault, setThemeDefault } from "../constants/global"
+import { useTheme } from "../hooks/useTheme"
 
 const Layout = ({ children }) => {
-  let styles = stylesDark;
+  const { theme, setTheme } = useTheme();
+  // console.log(theme);
+  let styles;
 
-  const [selected, setSelected] = useState(themes[0].value);
 
   const handleChange = event => {
-    console.log(event.target.value);
-    setSelected(event.target.value);
+    setTheme(event.target.value);
   };
 
-  if(selected == "Light"){
+  if(theme == "Light"){
     styles = styleLight;
-    setThemeDefault("Light")
   }  
-  if(selected == "Dark"){
+  if(theme == "Dark"){
     styles = stylesDark;
   }  
-  if(selected == "Banana"){
+  if(theme == "Banana"){
     styles = styleBanana;
   }
+
   return (
     <>
       <Head>
@@ -38,7 +39,7 @@ const Layout = ({ children }) => {
       <body className={styles.bodyStyle} >
 
       <section className={styles.flexlayout}>
-        <Nav />
+        <Nav theme={theme} />
         {themes.map(option => (
           <button className={styles.themeSelection} onClick={handleChange} key={option} value={option}>
             {option}
@@ -46,7 +47,7 @@ const Layout = ({ children }) => {
         ))}
 
         <main>{children}</main>
-        <Footer />
+        <Footer theme={theme}/>
       </section>
       </body>
     </>
