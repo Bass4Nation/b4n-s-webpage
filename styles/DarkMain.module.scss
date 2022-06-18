@@ -160,6 +160,20 @@ $footerHoverColor: $lightGray2;
     
   }
 
+//   Index
+
+.patchnotes{
+    .patchnote{
+        border-radius: $roundedCorners;
+        border: $thinBlackLine;
+        box-shadow: $elementShadow;
+        margin: $cardMarg;
+        padding: $cardPad;
+    
+    }
+    
+}
+
 
 //  projects
 
