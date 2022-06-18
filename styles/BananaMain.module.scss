@@ -193,6 +193,8 @@ $banana2: url("./easter/banana/banana2.png");
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 2vw;
+        background-color: red;
+
 }
 
 
@@ -201,14 +203,17 @@ $banana2: url("./easter/banana/banana2.png");
     flex-flow: column wrap;
     font-size: $fontsize;
     word-wrap: break-word;
+    
 }
 
 .front {
     border: $thinBlackLine;
+    
     margin: $cardMarg;
     padding: $cardPad;
     box-shadow: $elementShadow;
     border-radius: $roundedCorners;
+
 }
 
 .projectCard h3 {
@@ -261,3 +266,7 @@ $banana2: url("./easter/banana/banana2.png");
 
 /* If screen has a max width of 600px */
 @media only screen and (max-width: 600px) {}
+
+.easterOne{
+display: none;
+}

@@ -200,12 +200,15 @@ $footerHoverColor: $lightGray2;
     flex-flow: column wrap;
     font-size: $fontsize;
     word-wrap: break-word;
+
 }
 
 .front {
     border: $thinBlackLine;
     margin: $cardMarg;
     padding: $cardPad;
+    background-color: rgba(255, 255, 255, 0.486);
+
     box-shadow: $elementShadow;
     border-radius: $roundedCorners;
 }

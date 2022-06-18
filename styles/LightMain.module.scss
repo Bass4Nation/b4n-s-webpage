@@ -246,3 +246,11 @@ $footerHoverColor: $white;
 
 /* If screen has a max width of 600px */
 @media only screen and (max-width: 600px) {}
+
+.easterOne{
+    width: 10vw;
+    max-width: 5em;
+    min-width: 2em;
+    position: absolute;
+    right: 0%;
+}
