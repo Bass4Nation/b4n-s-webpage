@@ -4,10 +4,15 @@ import Image from "next/image";
 import stylesDark from "../styles/DarkMain.module.scss";
 import styleLight from "../styles/LightMain.module.scss"
 import styleBanana from "../styles/BananaMain.module.scss"
+import { useTheme } from "../hooks/useTheme"
+
+// import banana from "../styles/easter/banana2.png"
 
 const Footer = ({theme}) => {
 
   let styles;
+  const { setTheme } = useTheme();
+
 
   if(theme == "Light"){
     styles = styleLight;

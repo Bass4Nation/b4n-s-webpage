@@ -4,6 +4,8 @@ import styleBanana from "../styles/BananaMain.module.scss"
 import { useState } from "react";
 import Nav from "./Nav";
 import Head from "next/head";
+import Image from "next/image";
+
 import Footer from "./Footer";
 import { themes, themeDefault, setThemeDefault } from "../constants/global"
 import { useTheme } from "../hooks/useTheme"
@@ -15,8 +17,13 @@ const Layout = ({ children }) => {
 
 
   const handleChange = event => {
+    console.log(event.target.value);
     setTheme(event.target.value);
   };
+
+  const bananaMODE = () => {
+    setTheme("Banana")
+  }
 
   if(theme == "Light"){
     styles = styleLight;
@@ -48,6 +55,8 @@ const Layout = ({ children }) => {
 
         <main className={styles.mainContent}>{children}</main>
         <Footer theme={theme}/>
+        <img src="Banana2.png"  className={styles.easterOne} onClick={bananaMODE}/>
+
       </section>
       </body>
     </>

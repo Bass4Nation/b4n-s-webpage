@@ -1,4 +1,4 @@
 
-const themes = ['Dark','Light','Banana']
+const themes = ['Dark','Light']
 
 export {themes}
