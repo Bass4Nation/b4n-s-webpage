@@ -1,5 +1,6 @@
+import { useState } from "react";
 
-const themeDefault = 'Dark'
-const themes = ['Dark','Light']
+// const [themeDefault, setThemeDefault] = React.useState('Dark')
+const themes = ['Dark','Light','Banana']
 
-export {themeDefault, themes}
+export {themes}

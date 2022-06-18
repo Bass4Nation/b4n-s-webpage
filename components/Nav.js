@@ -1,11 +1,25 @@
 import Link from "next/link";
-import styles from "../styles/DarkMain.module.scss";
+
+import stylesDark from "../styles/DarkMain.module.scss";
+import styleLight from "../styles/LightMain.module.scss"
+import styleBanana from "../styles/BananaMain.module.scss"
+import { themes, themeDefault } from "../constants/global"
+
 import { useState } from "react";
 import { useRouter } from "next/router";
 
 const Nav = () => {
   const router = useRouter();
   const [screenState, setScreenState] = useState(true);
+
+  let styles = stylesDark;
+
+  const [selected, setSelected] = useState(themes[0].value);
+
+  const handleChange = event => {
+    console.log(event.target.value);
+    setSelected(event.target.value);
+  };
 
   const fullscreen = (
     <>

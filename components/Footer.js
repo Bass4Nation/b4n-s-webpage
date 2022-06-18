@@ -1,8 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/DarkMain.module.scss";
+import { useState } from "react";
+
+import stylesDark from "../styles/DarkMain.module.scss";
+import styleLight from "../styles/LightMain.module.scss"
+import styleBanana from "../styles/BananaMain.module.scss"
+import { themes } from "../constants/global"
 
 const Footer = () => {
+  let styles = stylesDark;
+
+  const [selected, setSelected] = useState(themes[0].value);
+
+  const handleChange = event => {
+    console.log(event.target.value);
+    setSelected(event.target.value);
+  };
+
+  if(selected == "Light"){
+    styles = styleLight;
+  }  
+  if(selected == "Dark"){
+    styles = stylesDark;
+  }  
+  if(selected == "Banana"){
+    styles = styleBanana;
+  }
+
   return (
     <>
       <section className={styles.flex_footer}>
@@ -29,6 +53,7 @@ const Footer = () => {
             />
           </section>
         </Link>
+
       </section>
     </>
   );

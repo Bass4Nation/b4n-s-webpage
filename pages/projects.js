@@ -1,27 +1,18 @@
 import ProjectContent from "../components/ProjectContent";
 import style from "../styles/DarkMain.module.scss"
+import { useGit } from "../hooks/useGit";
 
+const Projects = () => {
 
-// This gets called on every request
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`https://api.github.com/users/Bass4Nation/repos`)
-  const data = await res.json()
-  // Pass data to the page via props
-  return { props: { data } }
-}
-
-
-
-const Projects = ({ data }) => {
-  // console.log(data)
+  const { allRepo } = useGit()
+  // console.log(allRepo)
 
   return (
     <>
       <section>
         <h3 className={style.projectTitle}> Projects page</h3>
         <section className={style.projectCards}>
-          {data.map((git) => (
+          {allRepo.map((git) => (
             <ProjectContent
               key={git.node_id}
               title={git.name}

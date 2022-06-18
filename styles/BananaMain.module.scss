@@ -1,0 +1,256 @@
+// Imported fonts
+// Imported from Google
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
+$wh: 20%;
+$cardPadding: 10vw;
+$roundedCorners: 20px;
+$thinBlackLine: 2px solid black;
+$cardMarg: 10px;
+$cardPad: 10px;
+$elementShadow:5px 5px 10px rgba(22, 22, 22, 0.76);
+$shadowFooter: 5px -5px 10px  rgba(22, 22, 22, 0.76);
+// Color
+
+$white: rgb(235, 235, 235);
+$blueish: #03446A;
+$darkerGray:rgb(44, 44, 44); 
+$lightGray:rgb(65, 65, 65);
+$lightGray2: rgba(255, 255, 255, 0.233);
+$black: rgb(0, 0, 0);
+// Font
+$fontsize: 20px;
+$background: $darkerGray;
+
+$fontColor: $white;
+$mainFont: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$titleFontColor: $fontColor;
+
+$navActiveColor: $lightGray2;
+
+$pageFontSize: 10vw;
+$pageFont: Rajdhani;
+
+$themeSelectFont: Staatliches;
+$themeSelectFontSize: $fontsize;
+$themeSelectMaxWidth: 150px;
+$themeSelectionColor: $black;
+
+$footerColor:$lightGray;
+$footerHoverColor: $lightGray2;
+
+$img: url("./easter/banana/banana.png");
+
+
+// MAIN GLOBAL
+.bodyStyle{
+    background-image:$img ;
+    // background-color: $background;
+    font-family: $mainFont;
+    color: $fontColor;
+    background-position: center;
+    background-repeat: repeat;
+    background-size:auto;
+}
+
+
+// Layout
+.flexlayout{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// Selection for themes
+.themeSelection{
+    color:$fontColor;
+    background-color: $themeSelectionColor;
+    border-radius: $roundedCorners;
+    font-family: $themeSelectFont;
+    font-size: $themeSelectFontSize;
+    text-align: center;
+    max-width: $themeSelectMaxWidth;
+    margin: 1em;
+    appearance: none;
+}
+.themeSelection:hover{
+    border-radius: $roundedCorners;
+}
+// Navigation
+
+.nav_background{
+    background-image: $img;
+    padding-bottom: 1em;
+    /* Shadow below nav field */
+    box-shadow: $elementShadow; 
+}
+
+
+.main_title{
+    display: flex;
+    justify-content: center;
+    font-size: 5.5vw;
+    color: $titleFontColor;
+}
+
+.nav_section{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+
+}
+.nav_elements{
+    flex: 1;
+    padding: 0.1vw;   
+    margin: 1vw;
+    border-radius: $roundedCorners;
+    text-align: center;
+    width: 20%;
+    /* Shadow around the elements */
+    box-shadow: $elementShadow; 
+    transition: 0.5s;
+
+}
+
+.nav_active{
+    flex: 1;
+    padding: .1vw;
+    margin: 1vw;
+    border-radius: $roundedCorners;
+    text-align: center;
+    width: 20%;
+
+
+    background-color: $navActiveColor;
+
+}
+.nav_elements:hover{
+    background-color: $navActiveColor;
+}
+
+@media (max-width: 600px) {
+    .main_title{
+        display: flex;
+        font-size: 5.5vw;
+        color: $fontColor;
+    }
+    .nav_section{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: left;
+    }
+
+    .nav_elements{
+        flex: 1;
+        margin: 1%;
+        border-radius:  2vw;
+        border-color: rgba(0, 0, 0, 0.11);
+        text-align: center;
+        min-width: 35vw;
+        width: 20%;
+        /* Shadow around the elements */
+        box-shadow: $elementShadow; 
+    }
+
+    .nav_active{
+        flex: 1;
+        padding: 0.1vw;
+        padding-top: 1vw;
+        margin: 1vw;
+        border-radius:  2vw;
+        border-color: rgba(0, 0, 0, 0.11);
+        text-align: center;
+        min-width: 35vw;
+        width: 20%;
+        background-color: $navActiveColor ;
+    }
+    
+  }
+
+
+//  projects
+
+.projectTitle{
+    text-align: center;
+    font-size: $pageFontSize;
+    font-family: $pageFont;
+}
+
+.projectLinks:hover {
+    color: $fontColor;
+}
+
+.projectCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2vw;
+}
+
+
+.projectCard {
+    display: flex;
+    flex-flow: column wrap;
+    font-size: $fontsize;
+    word-wrap: break-word;
+}
+
+.front {
+    border: $thinBlackLine;
+    margin: $cardMarg;
+    padding: $cardPad;
+    box-shadow: $elementShadow;
+    border-radius: $roundedCorners;
+}
+
+.projectCard h3 {
+    font-size: large;
+}
+
+.projectCard p {
+    font-size: medium;
+}
+
+.projectCard a {
+    text-decoration: underline;
+}
+
+.projectCard img {
+    width: 100%;
+    border-radius: $roundedCorners;
+}
+
+
+// Footer
+
+.flex_footer {
+    display: flex;
+    background-color: $footerColor;
+    position: relative;
+    text-align: center;
+    /* Shadow around the elements */
+    box-shadow: $shadowFooter;
+  }
+  
+  .footer_element {
+    max-width: 10em;
+    margin: 10px;
+    padding: 20px;
+    border-radius: $roundedCorners;
+    /* Shadow around the elements */
+    box-shadow: $elementShadow;
+  }
+  .footer_element:hover {
+    background-color: $footerHoverColor;
+  }
+  
+  /* https://codepen.io/cbracco/pen/kQmVGM
+    Always bottom footer */
+  
+
+//
+
+/* If screen has a max width of 600px */
+@media only screen and (max-width: 600px) {}

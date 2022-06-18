@@ -1,8 +1,11 @@
 import Updates from "../components/Updates";
 import style1 from "../styles/DarkMain.module.scss"
 
+
 export default function Home() {
   let style = style1;
+
+
   return (
     <>
       <section className={style}>

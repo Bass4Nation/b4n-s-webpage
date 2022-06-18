@@ -1,25 +1,36 @@
+import { useGit } from "../hooks/useGit";
 
-export async function getServerSideProps() {
-    // Fetch data from external API
-    const res = await fetch(`https://api.github.com/users/Bass4Nation/repos`)
-    const data = await res.json()
-    // Pass data to the page via props
-    return { props: { data } }
-  }
 
-const Updates = ({ data }) => {
+const Updates = () => {
+    const { allPatch } = useGit()
     
-    console.log(data)
-    console.log("THIS")
+    const timeFormat = (stringTime) => {
+        let strTime = stringTime.replace("Z","")
+        const [dateRelated, timeRelated] = strTime.split('T');
+
+        const [year, month, day] = dateRelated.split('-');
+        const [hours, minutes, seconds] = timeRelated.split(':');
+
+        const date2 = new Date(+year, month - 1, +day, +hours, +minutes, +seconds);
+
+        let created_date = "Date: " + date2;
+        
+        return created_date;
+    }
 
     return (
         <>
         <section>
             <h3>Patch notes sent to Github. Push messages</h3>
-            {/* {data.payload.map(event =>
-                event.commits.map(status => (
-                    <p>{status.message}</p>
-                )))} */}
+            <section>
+            {allPatch.map((arg) => (
+                    arg.payload.commits.map((arg1) => (<>
+                    <p>{arg1.message}</p>
+                    <p>{timeFormat(arg.created_at)}</p>
+                    </>
+                    ))
+                ))}
+            </section>
         </section>
         </>
     )
