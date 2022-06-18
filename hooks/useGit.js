@@ -13,8 +13,6 @@ export const useGit = () => {
         const getAllRepo = async () => {
             try {
                 const response = await axios.get('https://api.github.com/users/Bass4Nation/repos')
-                // console.log(response.data);
-                console.log(response);
                 if(response?.status == 200){
                     setAllRepo(response.data)
                 }
@@ -31,7 +29,7 @@ export const useGit = () => {
         const getAllPatch = async () => {
             try {
                 const response = await axios.get('https://api.github.com/repos/Bass4Nation/b4n-s-webpage/events')
-                // console.log(response.data);
+                console.log(response.data);
                 if(response?.status == 200){
                     setAllPatch(response.data)
                 }

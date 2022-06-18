@@ -27,7 +27,7 @@ const Updates = () => {
             <h3>Patch notes sent to Github. Push messages</h3>
             <section className={styles.patchnotes}>
             {allPatch.map((arg) => (
-                    arg.payload.commits.map((arg1) => (<section className={styles.patchnote}>
+                    arg.payload.commits.map((arg1) => (<section key={arg1.sha} className={styles.patchnote}>
                     <p>{arg1.message}</p>
                     <p>{timeFormat(arg.created_at)}</p>
                     </section>
