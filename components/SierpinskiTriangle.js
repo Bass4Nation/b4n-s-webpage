@@ -4,52 +4,39 @@ const SierpinskiTriangle = () => {
 
 
 
-    const create = (x1,y1, x2, y2, x3, y3, h) => {
+    const create = (x1, y1, x2, y2, x3, y3) => {
         var c = document.getElementById("myCanvas");
-        var context = c.getContext("2d");
+        var ctx = c.getContext("2d");
 
+
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.lineTo(x3, y3);
+        ctx.closePath();
         
-        let height = h * Math.cos(Math.PI / 6);
-
-        context.beginPath();
-        context.moveTo(x1, y1);
-        context.lineTo(x2, y2);
-        context.lineTo(x3, y3 - height);
-        context.closePath();
-        context.stroke(); 
+        // ctx.fill();
+        ctx.stroke();
     }
     React.useEffect(() => {
-        var c = document.getElementById("myCanvas");
-        var context = c.getContext("2d");
 
-        const x1 = 100;
-        const x2 = 300;
-        const x3 = 200;
-        const y1 = 300;
-        const y2 = 300;
-        const y3 = 300;
-        const height = 200;
+        const x1 = 0, y1 = 150; 
+        const x2 = 150, y2 = 0;
+        const x3 = 300, y3 = 150;
 
-        
-        // let height = 200 * Math.cos(Math.PI / 6);
 
-        // context.beginPath();
-        // context.moveTo(100, 300);
-        // context.lineTo(300, 300);
-        // context.lineTo(200, 300 - height);
-        // context.closePath();
-        // context.stroke();
-        create(x1,y1,x2,y2,x3,y3,height);
-        for(let i = 1; i <= 3; i++){
-            create(x1,y1,x2 -=50,y2,x3,y3,height);
+
+        create(x1, y1, x2, y2, x3, y3);
+        for (let i = 1; i <= 3; i++) {
+            create(x1, y1 -=50, x2 -=50 , y2, x3 -=100, y3 -=50);
         }
-      }, []);
-    
+    }, []);
 
-    return(
+
+    return (
         <>
-        <h3>Trying to make SierpinskiTriangle</h3>
-        <canvas id="myCanvas" width={300} height={300}></canvas>
+            <h3>Trying to make Sierpinski Triangle (in progress)</h3>
+            <canvas id="myCanvas" width={300} height={300}></canvas>
         </>
     )
 }
