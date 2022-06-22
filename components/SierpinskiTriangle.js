@@ -49,7 +49,7 @@ const SierpinskiTriangle = () => {
     return(
         <>
         <h3>Trying to make SierpinskiTriangle</h3>
-        <canvas id="myCanvas" width={1000} height={500}></canvas>
+        <canvas id="myCanvas" width={300} height={300}></canvas>
         </>
     )
 }
