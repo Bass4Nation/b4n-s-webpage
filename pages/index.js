@@ -1,3 +1,4 @@
+import SierpinskiTriangle from "../components/SierpinskiTriangle";
 import Updates from "../components/Updates";
 import style1 from "../styles/DarkMain.module.scss"
 
@@ -18,6 +19,9 @@ export default function Home() {
           First one is for this project, and the second one is for all my public
           github projects.
         </p>
+      </section>
+      <section>
+        <SierpinskiTriangle />
       </section>
       <section>
         <Updates />
