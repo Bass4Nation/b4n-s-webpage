@@ -20,7 +20,7 @@ export default function Home() {
           github projects.
         </p>
         <h2> Other pages I am working on: </h2>
-        <p>ps: This page is the only one with a domain name. All other pages is using netlify's free web host</p>
+        <p>ps: This page is the only one with a domain name. All other pages is using netlify&apos;s free web host</p>
         <p> Quiz page (Started working on it 18/07/2022) : <a className={style.linkremove} href="https://b4n-question-page.netlify.app">HERE </a> </p>
       </section>
       <section>
