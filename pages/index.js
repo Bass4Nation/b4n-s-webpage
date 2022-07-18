@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <>
-      <section className={style}>
+      <section className={style.mainContent}>
       <h2>Frontpage</h2>
         <p>This page is under construction :)</p>
         <p>
@@ -19,6 +19,9 @@ export default function Home() {
           First one is for this project, and the second one is for all my public
           github projects.
         </p>
+        <h2> Other pages I am working on: </h2>
+        <p>ps: This page is the only one with a domain name. All other pages is using netlify's free web host</p>
+        <p> Quiz page (Started working on it 18/07/2022) : <a className={style.linkremove} href="https://b4n-question-page.netlify.app">HERE </a> </p>
       </section>
       <section>
         <SierpinskiTriangle />
