@@ -12,6 +12,9 @@ export default function Home() {
       <section className={style.mainContent}>
       <h2>Frontpage</h2>
         <p>This page is under construction :)</p>
+        <p>This page has been on a break, since ive been working on other pages like Snopestad Webpage (linked to right below) </p>
+        <h2> Snopestad Webpage (Started working on it 20/08/2022) : <a className={style.linkremove} href="https://snopestad.netlify.app">HERE </a> </h2>
+        <p>Snopestad Webpage is created with Vue 3 Vite. Wanted to try something else than React or Next.JS</p>
         <p>
           Hi. This is Bass4Nation AKA Kristoffer S Søderkvist&apos;s portfolio
           page. On top of this page is is a couple of choice for what you want
